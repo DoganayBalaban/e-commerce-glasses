@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Tinos&display=swap");
 body {
   margin: 0;
 }
@@ -10,9 +10,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+/* Header Alanı */
+header {
   background-color: #333;
   color: #fff;
-  font-family: "Poppins", sans-serif;
 }
 
 /* Logo */
@@ -64,12 +67,50 @@ main {
   background-color: brown;
 }
 /* Content Alanı */
-.content {
-  height: 1000px;
-  width: auto;
+.discount-img {
   background-color: black;
+  width: 150px;
+  height: 40px;
   color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.content {
+  padding: 20px;
+  margin: 10px;
+  background-color: #fff;
+}
+.content h1 {
+  font-weight: bold;
+  font-size: 48px;
+  text-align: center;
+  font-family: "Tinos", serif;
+  margin-bottom: -5px;
+}
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+.card-content {
+  padding: 20px;
+  color: #333;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
 /* Biz Kimiz Alanı */
 .about-us {
   height: 500px;
