@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap");
+
+body {
+  margin: 0;
+}
+
+/* Container  */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Logo */
+.img-logo {
+  margin-left: 10px;
+}
+
+/* Navbar */
+nav ul {
+  list-style: none;
+  display: flex;
+  letter-spacing: 1.75px;
+  font-size: 20px;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav a:hover {
+  color: black;
+  transition: 0.5s;
+}
+
+/* İndirim */
+.discount {
+  color: #ff0000;
+  font-family: "Raleway", sans-serif;
+}
+
+/* İkon */
+.icons {
+  margin-left: auto;
+}
+
+.icons li {
+  margin-right: 10px;
+}
+
+/* Hero ALanı */
+main {
+  width: auto;
+  height: 1000px;
+  background-color: brown;
+}
+/* Content Alanı */
+.content {
+  height: 1000px;
+  width: auto;
+  background-color: black;
+  color: white;
+}
+/* Biz Kimiz Alanı */
+.about-us {
+  height: 500px;
+  width: auto;
+  background-color: aqua;
+}
+/* İletişim Alanı */
+.contact {
+  height: 500px;
+  width: auto;
+  background-color: bisque;
+}
+/* Footer Alanı */
+footer {
+  height: 100px;
+  width: auto;
+  background-color: blue;
+}
