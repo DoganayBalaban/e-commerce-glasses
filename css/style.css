@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tinos&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
 body {
   margin: 0;
 }
@@ -12,7 +15,26 @@ body {
   padding: 20px;
   font-family: "Poppins", sans-serif;
 }
+
 /* Header Alanı */
+.anouncment {
+  width: 100%;
+  height: 29px;
+  background-color: #a52a2a;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1.5px;
+}
+.anouncment p {
+  text-decoration: underline;
+  color: white;
+  font-size: 16x;
+  cursor: pointer;
+  font-family: "Oswald";
+  margin-bottom: 1px;
+}
 header {
   background-color: #333;
   color: #fff;
@@ -29,6 +51,18 @@ nav ul {
   display: flex;
   letter-spacing: 1.75px;
   font-size: 20px;
+}
+nav ul li ul {
+  display: none;
+}
+nav ul li:hover ul {
+  display: block;
+  position: absolute;
+  margin-left: -20px;
+  background-color: #333;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 nav li {
@@ -76,7 +110,9 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
 }
+
 .content {
   padding: 20px;
   margin: 10px;
@@ -94,6 +130,11 @@ main {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.card:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
 }
 .card img {
   max-width: 100%;
@@ -110,6 +151,48 @@ main {
   grid-gap: 20px;
   padding: 20px;
 }
+.cok-satan {
+  padding: 20px;
+}
+.brands a {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.brands a:hover {
+  transform: scale(1.1);
+  animation-duration: 0.5s;
+}
+.cok-satan-yazi h2 {
+  font-weight: bold;
+  font-size: 48px;
+  text-align: start;
+  font-family: "Tinos", serif;
+  margin-bottom: -5px;
+}
+.discount-product {
+  padding: 10px;
+}
+.discount-product-yazi h2 {
+  font-weight: bold;
+  font-size: 48px;
+  text-align: start;
+  font-family: "Tinos", serif;
+  margin-bottom: -5px;
+  color: #a52a2a;
+  margin-left: 15px;
+}
+
+.brands {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 60px;
+  margin-top: 20px;
+}
+.brand {
+  width: 200px;
+  height: 200px;
+  background-color: #333;
+  border-radius: 20px;
+}
 
 /* Biz Kimiz Alanı */
 .about-us {
@@ -124,8 +207,33 @@ main {
   background-color: bisque;
 }
 /* Footer Alanı */
-footer {
-  height: 100px;
-  width: auto;
-  background-color: blue;
+
+/* footer kısmının ana hatlarının metin stili */
+.AnaHatMetinStili {
+  opacity: 0.5; /* %50 saydamlık */
+  color: black;
+  text-decoration: underline;
+
+  font-size: 20px;
+  font-family: "Lato";
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+ul li div ul li {
+  font-size: 12px;
+
+  font-weight: lighter;
+  text-align: left;
+}
+.telefonIcon::before {
+  content: "\260E"; /* Telefon simgesi unicode değeri */
+  font-size: 20px;
+  margin-right: 5px; /* İkon ile metin arasındaki boşluk */
+}
+
+.iletisim-bilgisi {
+  color: black;
 }
