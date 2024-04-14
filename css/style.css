@@ -63,10 +63,20 @@ nav ul li:hover ul {
   border: 2px solid white;
   border-radius: 10px;
   padding: 10px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 nav li {
   margin-right: 20px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+nav ul li:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
 }
 
 nav a {
@@ -94,11 +104,54 @@ nav a:hover {
   margin-right: 10px;
 }
 
-/* Hero ALanı */
-main {
-  width: auto;
-  height: 1000px;
-  background-color: brown;
+/* Hero Alanı */
+.hero-section {
+  background: url("../images/hero-banner.jpeg") no-repeat;
+  height: 80vh;
+  max-width: 100%;
+  color: #333;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+}
+#deneme {
+  margin-top: 160px;
+  margin-left: 45px;
+  font-size: 100px;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.1px;
+}
+
+.hero-content a {
+  margin-top: 20px;
+  margin-left: 90px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: transparent;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+  border-radius: 5px;
+  border: 2px solid #fff; /* Kenarlık eklemek için */
+  transition: transform 0.5s ease, opacity 0.5s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.cta-button:hover {
+  color: #333;
+  border-color: #333;
+  transform: scale(1.1);
+  opacity: 0.8;
 }
 /* Content Alanı */
 .discount-img {
@@ -138,11 +191,25 @@ main {
 }
 .card img {
   max-width: 100%;
-  height: auto;
+  height: 300px;
 }
 .card-content {
   padding: 20px;
   color: #333;
+}
+.buy-now-btn {
+  display: inline-block;
+  background-color: #333; /* Adjust the background color as needed */
+  color: #ffffff; /* Adjust the text color as needed */
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.buy-now-btn:hover {
+  background-color: #45a049; /* Adjust the hover background color as needed */
 }
 
 .grid-container {
@@ -180,6 +247,9 @@ main {
   color: #a52a2a;
   margin-left: 15px;
 }
+.product-area h2 {
+  margin: 50px 20px;
+}
 
 .brands {
   display: grid;
@@ -194,18 +264,101 @@ main {
   border-radius: 20px;
 }
 
-/* Biz Kimiz Alanı */
-.about-us {
-  height: 500px;
-  width: auto;
-  background-color: aqua;
-}
 /* İletişim Alanı */
-.contact {
-  height: 500px;
-  width: auto;
-  background-color: bisque;
+/* form css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: "Outfit";
+  background-color: linear-gradient(#ffdad5, #fff7f9);
+}
+
+.contact-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+
+.contact-left-title h2 {
+  font-weight: 600;
+  color: black;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.contact-left-title hr {
+  border: none;
+  width: 120px;
+  height: 5px;
+  background-color: grey;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-inputs {
+  width: 600px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding-left: 25px;
+  font-weight: 500;
+  color: rgba(128, 128, 128, 0.704);
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.401);
+}
+
+.contact-left textarea {
+  height: 140px;
+  padding-top: 15px;
+  border-radius: 20px;
+}
+.contact-inputs:focus {
+  border: 2px solid black;
+}
+
+.contact-inputs::placeholder {
+  color: rgba(10, 10, 10, 0.335);
+}
+.contact-left button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: transparent;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.1em;
+  border-radius: 5px;
+  border: 2px solid #333; /* Kenarlık eklemek için */
+  transition: transform 0.5s ease, opacity 0.5s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+.contact-left button:hover {
+  color: white;
+  background-color: #333;
+  border-color: white;
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.contact-left button img {
+  height: 15px;
+}
+.contact-right img {
+  width: 500px;
+  /* eger resim eklersen */
+}
+
 /* Footer Alanı */
 
 /* footer kısmının ana hatlarının metin stili */
@@ -214,7 +367,7 @@ main {
   color: black;
   text-decoration: underline;
 
-  font-size: 20px;
+  font-size: 19.5px;
   font-family: "Lato";
   text-align: center;
 }
@@ -222,18 +375,156 @@ main {
 ul {
   list-style-type: none;
 }
-ul li div ul li {
-  font-size: 12px;
 
-  font-weight: lighter;
-  text-align: left;
-}
 .telefonIcon::before {
   content: "\260E"; /* Telefon simgesi unicode değeri */
   font-size: 20px;
   margin-right: 5px; /* İkon ile metin arasındaki boşluk */
 }
 
+/* iletisim bilgisi yazi stili */
 .iletisim-bilgisi {
   color: black;
+}
+/* footer kısmındaki başlıkların ,alt başlıklarının boyutu */
+.small-font {
+  font-size: 17px;
+}
+
+/* versace1.html */
+.product-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-details {
+  max-width: 400px;
+}
+
+.add-to-cart {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.add-to-favorite {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #45a049;
+}
+
+.add-to-favorite:hover {
+  background-color: rgb(156, 156, 40);
+}
+
+/* About us */
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about-image {
+  flex: 1;
+  margin-right: 40px;
+  overflow: hidden;
+}
+.about-image img {
+  max-width: 100%;
+  margin-left: 170px;
+  height: auto;
+  display: block;
+  transition: 0.5s ease;
+}
+.about-content {
+  flex: 1;
+}
+.about-content h2 {
+  font-size: 23px;
+  margin-bottom: 15px;
+  color: #333;
+}
+.about-content p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #666;
+}
+.about-content .read-more {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #333;
+  font-size: 19px;
+  text-decoration: none;
+  border-radius: 25px;
+  margin-top: 15px;
+  transition: 0.3 ease;
+}
+.about-content .read-more:hover {
+  background-color: #3e8e41;
+}
+
+/* searchbar */
+.searchBar {
+  width: 100%;
+  max-width: 700px;
+  background: linear-gradient(
+    270deg,
+    rgba(81, 15, 15, 0.571),
+    rgba(0, 0, 0, 0.189)
+  );
+  margin-left: 370px;
+  margin-top: 50px;
+  border-radius: 60px;
+  padding: 10px 20px;
+  display: flex;
+  /* arama butonunu barın sagina yaslamamı saglayan ifade */
+  align-items: center;
+  padding: 10px 20px;
+  backdrop-filter: blur(4px) saturate(180%);
+}
+
+::placeholder {
+  color: rgba(87, 64, 64, 0.24);
+}
+
+.searchBar input {
+  background: transparent;
+  flex: 1;
+  /* arama butonunu bara göre ayarlamamı saglayan ifade */
+  border: 0;
+  outline: none;
+  padding: 24px 20px;
+  font-size: 20px;
+  color: black;
+}
+
+.searchBar img {
+  border-radius: 50%;
+  width: 65px;
+  height: 60px;
+}
+.searchBar button {
+  border: 0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: #58629b;
+  cursor: pointer;
 }

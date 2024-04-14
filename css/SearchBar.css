@@ -1,0 +1,47 @@
+.searchBar {
+  width: 100%;
+  max-width: 700px;
+  background: linear-gradient(
+    270deg,
+    rgba(81, 15, 15, 0.571),
+    rgba(0, 0, 0, 0.189)
+  );
+  margin-left: 370px;
+  margin-top: 50px;
+  border-radius: 60px;
+  padding: 10px 20px;
+  display: flex;
+  /* arama butonunu barın sagina yaslamamı saglayan ifade */
+  align-items: center;
+  padding: 10px 20px;
+  backdrop-filter: blur(4px) saturate(180%);
+}
+
+::placeholder {
+  color: rgba(87, 64, 64, 0.24);
+}
+
+.searchBar input {
+  background: transparent;
+  flex: 1;
+  /* arama butonunu bara göre ayarlamamı saglayan ifade */
+  border: 0;
+  outline: none;
+  padding: 24px 20px;
+  font-size: 20px;
+  color: black;
+}
+
+.searchBar img {
+  border-radius: 50%;
+  width: 65px;
+  height: 60px;
+}
+.searchBar button {
+  border: 0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: #58629b;
+  cursor: pointer;
+}

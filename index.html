@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KluGözlük</title>
+    <link rel="stylesheet" href="css/SearchBar.css" />
     <link rel="stylesheet" href="css/style.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -22,6 +24,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <!-- Header Alanı -->
@@ -29,11 +37,11 @@
       <div class="anouncment"><p>Sepette Net %50 İndirim !!</p></div>
       <div class="container">
         <div class="img-logo">
-          <a href=""
+          <a href="index.html"
             ><img
               src="images/download.png"
               alt="logo"
-              width="100px"
+              width="120px"
               height="100px"
           /></a>
         </div>
@@ -41,18 +49,17 @@
         <nav>
           <ul>
             <li>
-              <a href="#content">ÜRÜNLER</a>
+              <a href="pages/Products.html">ÜRÜNLER</a>
               <ul>
-                <li><a href="">Marka 1</a></li>
-                <li><a href="">Marka 2</a></li>
-                <li><a href="">Marka 3</a></li>
-                <li><a href="">Marka 4</a></li>
-                <li><a href="">Marka 5</a></li>
+                <li><a href="">Versace</a></li>
+                <li><a href="">Tom Ford</a></li>
+                <li><a href="">Gucci</a></li>
+                <li><a href="">Gabbana</a></li>
+                <li><a href="">Bvlgari</a></li>
               </ul>
             </li>
-            <li><a href="">ERKEK</a></li>
-            <li><a href="">KADIN</a></li>
-            <li><a href="">ÇOCUK</a></li>
+            <li><a href="pages/ManGlasses.html">ERKEK</a></li>
+            <li><a href="pages/WomanGlasses.html">KADIN</a></li>
             <li><a class="discount" href="#indirim">İNDİRİM</a></li>
           </ul>
         </nav>
@@ -60,10 +67,12 @@
         <nav>
           <ul>
             <li>
-              <a href="#"><i class="fa-regular fa-user"></i></a>
+              <a href="pages/Login.html"><i class="fa-regular fa-user"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+              <a class="search-bar" href="pages/Products.html"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></a>
             </li>
             <li>
               <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -73,19 +82,25 @@
       </div>
     </header>
     <!-- Hero Alanı -->
-
-    <main>HERO ALANI</main>
+    <main>
+      <header class="hero-section">
+        <div class="hero-content">
+          <h1 id="deneme">Çok Satanlar</h1>
+          <a href="pages/Products.html" class="cta-button">Şimdi Satın Al</a>
+        </div>
+      </header>
+    </main>
     <!-- Content Alanı -->
     <section id="content">
       <div class="container">
         <!-- Çok Satan Markalar -->
         <div class="cok-satan">
           <div class="cok-satan-yazi">
-            <h2>Çok Satan Markalar</h2>
+            <h2 id="coksatan">Çok Satan Markalar</h2>
           </div>
           <div class="brands">
             <a href="#versace"
-              ><img src="images/rbbannerbrkn1.webp" alt="" class="brand"
+              ><img src="images/gabbana/gabba3.jpg" alt="" class="brand"
             /></a>
             <a href=""
               ><img src="images/rbbannerbrkn1.webp" alt="" class="brand"
@@ -112,10 +127,7 @@
           <div class="grid-container">
             <div class="card">
               <div class="discount-img">%30 İNDİRİM</div>
-              <img
-                src="images/oakley-oo-9416-0264-64-17---2023-10-12t163416.webp"
-                alt=""
-              />
+              <img src="images/gabbana/gabba3.jpg" alt="" />
               <div class="card-content">
                 <h2>Versace 4436-U 108/73 57-18 Kadın Güneş Gözlüğü</h2>
                 <del>6.950.00 TL</del>
@@ -124,10 +136,7 @@
             </div>
             <div class="card">
               <div class="discount-img">%30 İNDİRİM</div>
-              <img
-                src="images/oakley-oo-9416-0264-64-17---2023-10-12t163416.webp"
-                alt=""
-              />
+              <img src="images/bvlgari/bvlgari2.jpg" alt="" />
               <div class="card-content">
                 <h2>Versace 4436-U 108/73 57-18 Kadın Güneş Gözlüğü</h2>
                 <del>6.950.00 TL</del>
@@ -136,10 +145,7 @@
             </div>
             <div class="card">
               <div class="discount-img">%30 İNDİRİM</div>
-              <img
-                src="images/oakley-oo-9416-0264-64-17---2023-10-12t163416.webp"
-                alt=""
-              />
+              <img src="images/gabbana/gabbana1.jpg" alt="" />
               <div class="card-content">
                 <h2>Versace 4436-U 108/73 57-18 Kadın Güneş Gözlüğü</h2>
                 <del>6.950.00 TL</del>
@@ -148,10 +154,7 @@
             </div>
             <div class="card">
               <div class="discount-img">%30 İNDİRİM</div>
-              <img
-                src="images/oakley-oo-9416-0264-64-17---2023-10-12t163416.webp"
-                alt=""
-              />
+              <img src="images/gucci/gucci3.jpg" alt="" />
               <div class="card-content">
                 <h2>Versace 4436-U 108/73 57-18 Kadın Güneş Gözlüğü</h2>
                 <del>6.950.00 TL</del>
@@ -169,10 +172,7 @@
         <div class="grid-container">
           <div class="card">
             <div class="discount-img">%30 İNDİRİM</div>
-            <img
-              src="images/oakley-oo-9416-0264-64-17---2023-10-12t163416.webp"
-              alt=""
-            />
+            <img src="images/versace/versc1.avif" alt="" />
             <div class="card-content">
               <h2>Versace 4436-U 108/73 57-18 Kadın Güneş Gözlüğü</h2>
               <del>6.950.00 TL</del>
@@ -181,10 +181,7 @@
           </div>
           <div class="card">
             <div class="discount-img">%30 İNDİRİM</div>
-            <img
-              src="images/oakley-oo-9416-0264-64-17---2023-10-12t163416.webp"
-              alt=""
-            />
+            <img src="images/versace/versc2.avif" alt="" />
             <div class="card-content">
               <h2>Versace 4436-U 108/73 57-18 Kadın Güneş Gözlüğü</h2>
               <del>6.950.00 TL</del>
@@ -193,10 +190,7 @@
           </div>
           <div class="card">
             <div class="discount-img">%30 İNDİRİM</div>
-            <img
-              src="images/oakley-oo-9416-0264-64-17---2023-10-12t163416.webp"
-              alt=""
-            />
+            <img src="images/versace/vers3.avif" alt="" />
             <div class="card-content">
               <h2>Versace 4436-U 108/73 57-18 Kadın Güneş Gözlüğü</h2>
               <del>6.950.00 TL</del>
@@ -205,10 +199,7 @@
           </div>
           <div class="card">
             <div class="discount-img">%30 İNDİRİM</div>
-            <img
-              src="images/oakley-oo-9416-0264-64-17---2023-10-12t163416.webp"
-              alt=""
-            />
+            <img src="images/versace/versc4.avif" alt="" />
             <div class="card-content">
               <h2>Versace 4436-U 108/73 57-18 Kadın Güneş Gözlüğü</h2>
               <del>6.950.00 TL</del>
@@ -224,7 +215,12 @@
         <div class="grid-container">
           <div class="card">
             <div class="discount-img">%30 İNDİRİM</div>
-            <img src="images/d.webp" alt="" />
+            <img
+              src="images/tomford/tmf1.jpg"
+              width="400px"
+              height="200px"
+              alt=""
+            />
             <div class="card-content">
               <h2>Tom Ford TF 904 01A 52-19 Erkek Güneş Gözlüğü</h2>
               <del>12.990.00 TL</del>
@@ -233,7 +229,12 @@
           </div>
           <div class="card">
             <div class="discount-img">%30 İNDİRİM</div>
-            <img src="images/d.webp" alt="" />
+            <img
+              src="images/tomford/tmf2.jpg"
+              width="400px"
+              height="200px"
+              alt=""
+            />
             <div class="card-content">
               <h2>Tom Ford TF 904 01A 52-19 Erkek Güneş Gözlüğü</h2>
               <del>12.990.00 TL</del>
@@ -242,7 +243,12 @@
           </div>
           <div class="card">
             <div class="discount-img">%30 İNDİRİM</div>
-            <img src="images/d.webp" alt="" />
+            <img
+              src="images/tomford/tmf3.jpg"
+              width="400px"
+              height="200px"
+              alt=""
+            />
             <div class="card-content">
               <h2>Tom Ford TF 904 01A 52-19 Erkek Güneş Gözlüğü</h2>
               <del>12.990.00 TL</del>
@@ -251,7 +257,141 @@
           </div>
           <div class="card">
             <div class="discount-img">%30 İNDİRİM</div>
-            <img src="images/d.webp" alt="" />
+            <img
+              src="images/tomford/tmfr4.jpg"
+              width="400px"
+              height="200px"
+              alt=""
+            />
+            <div class="card-content">
+              <h2>Tom Ford TF 904 01A 52-19 Erkek Güneş Gözlüğü</h2>
+              <del>12.990.00 TL</del>
+              <p>9.093.00 TL</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content">
+      <h1>GUCCI</h1>
+      <div class="container">
+        <div class="grid-container">
+          <div class="card">
+            <div class="discount-img">%30 İNDİRİM</div>
+            <img src="images/gucci/gucci1.jpg" alt="" />
+            <div class="card-content">
+              <h2>Tom Ford TF 904 01A 52-19 Erkek Güneş Gözlüğü</h2>
+              <del>12.990.00 TL</del>
+              <p>9.093.00 TL</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="discount-img">%30 İNDİRİM</div>
+            <img src="images/gucci/gucci2.jpg" alt="" />
+            <div class="card-content">
+              <h2>Tom Ford TF 904 01A 52-19 Erkek Güneş Gözlüğü</h2>
+              <del>12.990.00 TL</del>
+              <p>9.093.00 TL</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="discount-img">%30 İNDİRİM</div>
+            <img src="images/gucci/gucci3.jpg" alt="" />
+            <div class="card-content">
+              <h2>Tom Ford TF 904 01A 52-19 Erkek Güneş Gözlüğü</h2>
+              <del>12.990.00 TL</del>
+              <p>9.093.00 TL</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="discount-img">%30 İNDİRİM</div>
+            <img src="images/gucci/gucci4.jpg" alt="" />
+            <div class="card-content">
+              <h2>Tom Ford TF 904 01A 52-19 Erkek Güneş Gözlüğü</h2>
+              <del>12.990.00 TL</del>
+              <p>9.093.00 TL</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content">
+      <h1>GABBANA</h1>
+      <div class="container">
+        <div class="grid-container">
+          <div class="card">
+            <div class="discount-img">%30 İNDİRİM</div>
+            <img src="images/gabbana/gabbana1.jpg" alt="" />
+            <div class="card-content">
+              <h2>Tom Ford TF 904 01A 52-19 Erkek Güneş Gözlüğü</h2>
+              <del>12.990.00 TL</del>
+              <p>9.093.00 TL</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="discount-img">%30 İNDİRİM</div>
+            <img src="images/gabbana/gabbana2.jpg" alt="" />
+            <div class="card-content">
+              <h2>Tom Ford TF 904 01A 52-19 Erkek Güneş Gözlüğü</h2>
+              <del>12.990.00 TL</del>
+              <p>9.093.00 TL</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="discount-img">%30 İNDİRİM</div>
+            <img src="images/gabbana/gabba3.jpg" alt="" />
+            <div class="card-content">
+              <h2>Tom Ford TF 904 01A 52-19 Erkek Güneş Gözlüğü</h2>
+              <del>12.990.00 TL</del>
+              <p>9.093.00 TL</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="discount-img">%30 İNDİRİM</div>
+            <img src="images/gabbana/gabbana4.jpg" alt="" />
+            <div class="card-content">
+              <h2>Tom Ford TF 904 01A 52-19 Erkek Güneş Gözlüğü</h2>
+              <del>12.990.00 TL</del>
+              <p>9.093.00 TL</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content">
+      <h1>BVLGARİ</h1>
+      <div class="container">
+        <div class="grid-container">
+          <div class="card">
+            <div class="discount-img">%30 İNDİRİM</div>
+            <img src="images/bvlgari/bvlgari1.jpg" alt="" />
+            <div class="card-content">
+              <h2>Tom Ford TF 904 01A 52-19 Erkek Güneş Gözlüğü</h2>
+              <del>12.990.00 TL</del>
+              <p>9.093.00 TL</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="discount-img">%30 İNDİRİM</div>
+            <img src="images/bvlgari/bvlgari2.jpg" alt="" />
+            <div class="card-content">
+              <h2>Tom Ford TF 904 01A 52-19 Erkek Güneş Gözlüğü</h2>
+              <del>12.990.00 TL</del>
+              <p>9.093.00 TL</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="discount-img">%30 İNDİRİM</div>
+            <img src="images/bvlgari/bvlgari3.jpg" alt="" />
+            <div class="card-content">
+              <h2>Tom Ford TF 904 01A 52-19 Erkek Güneş Gözlüğü</h2>
+              <del>12.990.00 TL</del>
+              <p>9.093.00 TL</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="discount-img">%30 İNDİRİM</div>
+            <img src="images/bvlgari/bvlgari4.jpg" alt="" />
             <div class="card-content">
               <h2>Tom Ford TF 904 01A 52-19 Erkek Güneş Gözlüğü</h2>
               <del>12.990.00 TL</del>
@@ -262,48 +402,212 @@
       </div>
     </section>
     <!-- Biz Kimiz Alanı -->
-    <section class="about-us">Biz Kimiz Alanı</section>
+    <section class="about-us">
+      <div class="container">
+        <section class="about">
+          <div class="about-image">
+            <img src="images/download.png" alt="" />
+          </div>
+          <div class="about-content">
+            <h2>Kaliteli Gözlükler</h2>
+            <p>
+              4 kişi ortaklığıyla bir araya kaliteli, hızlı ve basit bir şekilde
+              gözlük satmaya girişen bir topluluğuz. Otuz9 optik olarak
+              önceliğimiz müşterilerimizin rahatı ve memnuniyeti.
+            </p>
+            <a href="" class="read-more">Daha fazla</a>
+          </div>
+        </section>
+      </div>
+    </section>
     <!-- İletişim Alanı-->
-    <section class="contact">İletişim Alanı</section>
+    <section class="contact">
+      <div class="contact-container">
+        <form action="" class="contact-left">
+          <div class="contact-left-title">
+            <h2>Bize Ulaşın</h2>
+            <hr />
+          </div>
+          <input
+            type="text"
+            name="name"
+            placeholder="İsminiz"
+            class="contact-inputs"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Emailiniz"
+            class="contact-inputs"
+          />
+          <textarea
+            name="message"
+            placeholder="Mesajınız"
+            class="contact-inputs"
+            required
+          ></textarea>
+          <button type="submit">Gönder <img src="#" alt="" /></button>
+        </form>
+        <div class="contact-right">
+          <img src="" alt="" />
+        </div>
+      </div>
+    </section>
     <!-- Footer Alanı -->
     <footer>
-      <div class="container-fluid my-2 p-3 bg-dark">
+      <div class="container-fluid my-2 p-3 bg-dark w-100">
         <div class="row">
           <div class="col-sm-12">
-            <ul class="nav justify-content-around">
-              <li class="nav-item">
-                <a class="nav-link AnaHatMetinStili" href="#">KURUMSAL</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link AnaHatMetinStili" href="#">YARDIM</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link AnaHatMetinStili" href="#">KATEGORİLER</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link AnaHatMetinStili" href="#"
-                  >MOBİL ALISVERİS</a
-                >
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle AnaHatMetinStili"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                >
-                  İLETİSİM
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Tel: 44455689</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#"
-                      >E-posta: example@example.com</a
+            <ul class="d-flex">
+              <li class="m-2 p-3 bg-secondary rounded AnaHatMetinStili">
+                KURUMSAL
+                <ul class="small-font">
+                  <li
+                    class="m-2 p-2 bg-secondary rounded d-flex align-items-center"
+                  >
+                    <a href="#" style="text-decoration: none; color: black"
+                      >Hakkımızda</a
                     >
                   </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Instagram: GozlukStore</a>
+                  <li
+                    class="m-2 p-2 bg-secondary rounded d-flex align-items-center"
+                  >
+                    <a href="#" style="color: black">Mağazalarımız</a>
+                  </li>
+                  <li
+                    class="m-2 p-2 bg-secondary rounded d-flex align-items-center"
+                  >
+                    <a href="#" style="text-decoration: none; color: black"
+                      >Kullanıcı Sözleşmesi</a
+                    >
+                  </li>
+                  <li
+                    class="m-2 p-2 bg-secondary rounded d-flex align-items-center"
+                  >
+                    <a href="#" style="text-decoration: none; color: black"
+                      >Gizlilik Beyanı</a
+                    >
+                  </li>
+                  <li
+                    class="m-2 p-2 bg-secondary rounded d-flex align-items-center"
+                  >
+                    <a href="#" style="text-decoration: none; color: black"
+                      >Kalite Sertifikası</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="m-2 p-3 bg-secondary rounded AnaHatMetinStili">
+                YARDIM
+                <ul class="small-font">
+                  <li
+                    class="m-2 p-2 bg-secondary rounded d-flex align-items-center"
+                  >
+                    <a href="#" style="color: black">Hesabım</a>
+                  </li>
+                  <li
+                    class="m-2 p-2 bg-secondary rounded d-flex align-items-center"
+                  >
+                    <a href="#" style="color: black">Sipariş Takibi</a>
+                  </li>
+                  <li
+                    class="m-2 p-2 bg-secondary rounded d-flex align-items-center"
+                  >
+                    <a href="#" style="color: black">Sık Sorulan Sorular</a>
+                  </li>
+                  <li
+                    class="m-2 p-2 bg-secondary rounded d-flex align-items-center"
+                  >
+                    <a href="#" style="color: black">Kampanya Koşulları</a>
+                  </li>
+                  <li
+                    class="m-2 p-2 bg-secondary rounded d-flex align-items-center"
+                  >
+                    <a href="#" style="color: black">Blog</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="m-2 p-3 bg-secondary rounded AnaHatMetinStili">
+                KATEGORİLER
+                <ul style="text-decoration: none" class="small-font">
+                  <li
+                    class="m-2 p-2 bg-secondary rounded d-flex align-items-center"
+                  >
+                    <a href="#" style="color: black; margin-left: -8px"
+                      >Erkek</a
+                    >
+                  </li>
+                  <li
+                    class="m-2 p-2 bg-secondary rounded d-flex align-items-center"
+                  >
+                    <a href="#" style="color: black; margin-left: -8px"
+                      >Kadın</a
+                    >
+                  </li>
+                  <li
+                    class="m-2 p-2 bg-secondary rounded d-flex align-items-center"
+                  >
+                    <a href="#" style="color: black; margin-left: -8px"
+                      >Çocuk</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="m-2 p-3 bg-secondary rounded AnaHatMetinStili ms-auto">
+                MOBİL ALIŞVERİŞ
+                <ul class="small-font">
+                  <li class="m-2 p-2 bg-secondary rounded">
+                    <div class="d-flex align-items-center">
+                      <div class="me-2" style="margin-left: -20px">
+                        <i class="fab fa-google-play"></i>
+                      </div>
+                      <a href="#" style="color: black">
+                        <div>Google Play</div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="m-2 p-2 bg-secondary rounded">
+                    <div class="d-flex align-items-center">
+                      <div class="me-2" style="margin-left: -20px">
+                        <i class="fab fa-app-store-ios"></i>
+                      </div>
+                      <a href="#" style="color: black">
+                        <div>App Store</div>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="m-2 p-3 bg-secondary rounded AnaHatMetinStili ms-auto">
+                İLETİŞİM
+                <ul class="small-font">
+                  <li class="m-2 p-2 bg-secondary rounded">
+                    <div class="d-flex align-items-center">
+                      <div class="telefonIcon"></div>
+                      <a href="#" style="color: black">
+                        <div class="iletisim-bilgisi">Tel: 44455689</div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="m-2 p-2 bg-secondary rounded">
+                    <div class="d-flex align-items-center">
+                      <div class="me-2">
+                        <i class="fas fa-envelope"></i>
+                      </div>
+                      <a href="#" style="color: black">
+                        <div>E-posta: example@example.com</div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="m-2 p-2 bg-secondary rounded">
+                    <div class="d-flex align-items-center">
+                      <div class="me-2">
+                        <i class="fab fa-instagram"></i>
+                      </div>
+                      <a href="#" style="color: black">
+                        <div>Instagram: KluGozluk</div>
+                      </a>
+                    </div>
                   </li>
                 </ul>
               </li>
