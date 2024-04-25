@@ -1,3 +1,6 @@
+<?php
+include "../php/login.php"
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -72,26 +75,28 @@
     <div class="container">
       <h2>Giriş Yap</h2>
 
-      <form>
+      <form
+        action=""
+        method="POST"
+      >
         <label for="username">Kullanıcı Adı:</label>
-        <input type="text" id="username" name="username" required />
+        <input type="text" id="username" name="username" />
 
         <label for="password">Şifre:</label>
-        <input type="password" id="password" name="password" required />
+        <input type="password" id="password" name="password" />
 
-        <button type="submit">Giriş Yap</button>
+        <input type="submit" value="Giriş Yap"  name = "kaydet"/>
         <p style="text-align: left">
           <a href="#" target="_blank">Şifreni mi unuttun?</a>
         </p>
         <p style="text-align: left">
-          <a href="Register.html" target=""
-            >Bir hesabın yok mu? Hesap oluştur</a
-          >
+          <a href="Kayıtol.php" target="">Bir hesabın yok mu? Hesap oluştur</a>
         </p>
         <p style="text-align: left">
-          <a href="../index.html">Hesap Açmadan Devam Et.</a>
+          <a href="../index.php">Hesap Açmadan Devam Et.</a>
         </p>
       </form>
     </div>
+    <script src="../js/index.js"></script>
   </body>
 </html>

@@ -391,12 +391,13 @@ ul {
   font-size: 17px;
 }
 
-/* versace1.html */
+/* product.php */
 .product-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
+  height: 100vh;
 }
 
 .product-image img {
