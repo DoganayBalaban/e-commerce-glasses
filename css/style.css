@@ -314,7 +314,7 @@ body {
   outline: none;
   padding-left: 25px;
   font-weight: 500;
-  color: rgba(128, 128, 128, 0.704);
+  color:white;
   border-radius: 50px;
   background-color: rgba(0, 0, 0, 0.401);
 }
@@ -391,7 +391,7 @@ ul {
   font-size: 17px;
 }
 
-/* product.php */
+/* Singleproduct.php */
 .product-container {
   display: flex;
   justify-content: space-around;

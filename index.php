@@ -1,3 +1,4 @@
+<?php include 'php/db.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +36,7 @@ include "inc/header.php";
     <header class="hero-section">
         <div class="hero-content">
             <h1 id="deneme">Çok Satanlar</h1>
-            <a href="pages/Products.html" class="cta-button">Şimdi Satın Al</a>
+            <a href="pages/Products.php" class="cta-button">Şimdi Satın Al</a>
         </div>
     </header>
 </main>
@@ -338,24 +339,27 @@ include "inc/header.php";
 <!-- İletişim Alanı-->
 <section class="contact">
     <div class="contact-container">
-        <form action="" class="contact-left">
+        <form method="post" action="php/mail-gonder.php" class="contact-left">
             <div class="contact-left-title">
                 <h2>Bize Ulaşın</h2>
                 <hr/>
             </div>
             <input
+                    style="color: white"
                     type="text"
                     name="name"
                     placeholder="İsminiz"
                     class="contact-inputs"
             />
             <input
+                    style="color: white"
                     type="email"
                     name="email"
                     placeholder="Emailiniz"
                     class="contact-inputs"
             />
             <textarea
+                    style="color: white"
                     name="message"
                     placeholder="Mesajınız"
                     class="contact-inputs"

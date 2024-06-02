@@ -9,7 +9,7 @@ while ($row = mysqli_fetch_assoc($result)) { ?>
             <h2><?php echo $row["aciklama"]; ?></h2>
             <p><?php echo $row["fiyat"]; ?>TL</p>
             <div class="satın-al">
-                <a href="pages/<?php echo 'product.php?urun_id='.$row["urun_id"]; ?>"><button class="add-to-cart">Satın Al</button></a>
+                <a href="pages/<?php echo 'Singleproduct.php?urun_id='.$row["urun_id"]; ?>"><button class="add-to-cart">Satın Al</button></a>
             </div>
         </div>
     </div>

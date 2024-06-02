@@ -14,9 +14,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $sql = "SELECT * FROM kullanicilar WHERE kullanici_adi='$username' AND sifre='$password'";
         $result = mysqli_query($conn, $sql);
+        $user = mysqli_fetch_assoc($result);
 
         // Kullanıcı bulunduysa, giriş başarılı
         if (mysqli_num_rows($result) == 1) {
+            session_start();
+            $_SESSION['ad'] = $user['kullanici_adi'];
+            $_SESSION['user_id'] = $user['kullanici_id'];
             header("Location: ../index.php");
             exit(); // İşlemi sonlandır
         } else {
