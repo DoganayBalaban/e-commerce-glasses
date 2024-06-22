@@ -1,7 +1,7 @@
 <?php
 
-require "products.php";
-session_start();
+require "products-islemler.php";
+
 function control_input($data) {
     // $data = strip_tags($data);
     $data = htmlspecialchars($data);
@@ -15,7 +15,7 @@ $UrunAd = $Marka = "";
 $UrunAd_err= $Marka_err = "";
 
 if ($_SERVER["REQUEST_METHOD"]=="POST") {
-    
+
 
     // validate title
 
@@ -27,27 +27,33 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
     $Aciklama= control_input($input_Aciklama);
     $input_Fiyat = trim($_POST["Fiyat"]);
     $Fiyat= control_input($input_Fiyat);
-    $Resim = $_POST["Resim"];
+    $Resim = $_POST["resim"];
 
-    
+    // Fiyatı float türüne dönüştür
+    if (is_numeric($Fiyat)) {
+        $Fiyat = (float) $Fiyat;
+    } else {
+        // Geçerli bir sayı değilse uygun bir varsayılan değer ata
+        $Fiyat = 0.0;
+    }
 
     // validate description
 
 
-        if (urunEKLE($UrunAd,  $Marka,  $Aciklama, $Fiyat,  $Resim)) {
-            $_SESSION['message'] = $UrunAd." isimli ürün eklendi";
-            $_SESSION['type'] = "success";
-            
-            header('Location: products.php');
-        } else {
-            echo "hata";
-        }
-     
- 
+    if (urunEKLE($UrunAd,  $Marka,  $Aciklama, $Fiyat,  $Resim)) {
+        $_SESSION['message'] = $UrunAd." isimli ürün eklendi";
+        $_SESSION['type'] = "success";
+        header('Location: products.php');
+        exit();
+    } else {
+        echo "hata";
+    }
+
+
 }
 ?>
 
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,42 +82,42 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
 <body>
 
 
-    <header>
-        <h1>otuz9optik Yönetim Paneli</h1>
-    </header>
-    <div class="container my-3">
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <form method="POST" >
-                            <div class="mb-3">
-                                <label for="UrunAd" class="form-label">Ürünün Adı</label>
-                                <input type="text" class="form-control" name="UrunAd" id="UrunAd"  require >
-                            </div>
-                            <div class="mb-3">
-                                <label for="Marka" class="form-label">Marka</label>
-                                <input type="text" class="form-control" name="Marka" id="Marka"  require>
-                            </div>
-                            <div class="mb-3">
-                                <label for="Fiyat" class="form-label">Fiyat</label>
-                                <input type="text" class="form-control" name="Fiyat" id="Fiyat" >
-                            </div>
-                            <div class="mb-3">
-                                <label for="Acıklama" class="form-label">Açıklama</label>
-                                <input type="text" class="form-control" name="Aciklama" id="Aciklama" >
-                            </div>
-                            <div class="mb-3">
-                                <label for="Resim" class="form-label">Resim</label>
-                                <input type="text" class="form-control" name="Resim" id="Resim" >
-                            </div>
-                            <a href="products.php"><input type="submit" value="Ürün Ekle" class="btn btn-primary "></a>
-                        </form>
-                    </div>
+<header>
+    <h1>otuz9optik Yönetim Paneli</h1>
+</header>
+<div class="container my-3">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <form method="POST" >
+                        <div class="mb-3">
+                            <label for="UrunAd" class="form-label">Ürünün Adı</label>
+                            <input type="text" class="form-control" name="UrunAd" id="UrunAd"  required >
+                        </div>
+                        <div class="mb-3">
+                            <label for="Marka" class="form-label">Marka</label>
+                            <input type="text" class="form-control" name="Marka" id="Marka"  required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Fiyat" class="form-label">Fiyat</label>
+                            <input type="text" class="form-control" name="Fiyat" id="Fiyat" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="Acıklama" class="form-label">Açıklama</label>
+                            <input type="text" class="form-control" name="Aciklama" id="Aciklama" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="Resim" class="form-label">Resim</label>
+                            <input type="file" class="form-control" name="resim" id="Resim" >
+                        </div>
+                        <input type="submit" value="Ürün Ekle" class="btn btn-primary ">
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </body>
 
 </html>

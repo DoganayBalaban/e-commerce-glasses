@@ -20,5 +20,6 @@ if (isset($_POST["kaydet"])) {
         echo "<script>alert('Kayıt Ekleme Başarısız')</script>";
     }
     mysqli_close($conn);
+    header('Location: ../pages/Girisyap.php');
 }
 

@@ -3,6 +3,7 @@ include "../php/db.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['urun_id'])) {
     $urun_id = intval($_POST['urun_id']);
+    $user_id = $_SESSION['user_id'];
     $adet = 1; // Varsayılan olarak 1 adet ekliyoruz, isterseniz farklı değer alabilirsiniz.
 
     // Sepette aynı ürün var mı kontrol et
@@ -15,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['urun_id'])) {
         mysqli_query($conn, $sql_update);
     } else {
         // Ürün sepette yoksa yeni kayıt ekle
-        $sql_insert = "INSERT INTO sepet (urun_id, deger) VALUES ($urun_id, $adet)";
+        $sql_insert = "INSERT INTO sepet (urun_id, deger,kullanici_id) VALUES ($urun_id, $adet,$user_id)";
         mysqli_query($conn, $sql_insert);
     }
 

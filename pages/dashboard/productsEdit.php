@@ -1,7 +1,7 @@
 <?php
 
-require "products.php";
-session_start();
+require "products-islemler.php";
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $urunid = isset($_GET['id']) ? intval($_GET['id']) : 0;
@@ -49,61 +49,61 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-    <?php
-    //$urunid = $_GET["urun_id"];
-    // admin panelinde düzenleye bastığımız ürünün id'sini aldık ki duzenleyecegimiz urunu bilelim
-    // $result = urunListele($urunid);
-    // $selectedUrun = mysqli_fetch_assoc($result); 
+<?php
+//$urunid = $_GET["urun_id"];
+// admin panelinde düzenleye bastığımız ürünün id'sini aldık ki duzenleyecegimiz urunu bilelim
+// $result = urunListele($urunid);
+// $selectedUrun = mysqli_fetch_assoc($result);
 
-    if (isset($_GET['id'])) {
-        $urunid = intval($_GET['id']);
+if (isset($_GET['id'])) {
+    $urunid = intval($_GET['id']);
 
-        // Anahtar tanımlı ise, işlem yapabilirsiniz
-    } else {
-        // Anahtar tanımlı değilse, bir hata mesajı gösterebilir veya yönlendirme yapabilirsiniz
-        echo "Ürün ID bulunamadı.";
-        exit();
-    }
-    $result = urunGetir($urunid);
-    $selectedUrun = mysqli_fetch_assoc($result);
-    ?>
+    // Anahtar tanımlı ise, işlem yapabilirsiniz
+} else {
+    // Anahtar tanımlı değilse, bir hata mesajı gösterebilir veya yönlendirme yapabilirsiniz
+    echo "Ürün ID bulunamadı.";
+    exit();
+}
+$result = urunGetir($urunid);
+$selectedUrun = mysqli_fetch_assoc($result);
+?>
 
-    <header>
-        <h1>otuz9optik Yönetim Paneli</h1>
-    </header>
-    <div class="container my-3">
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <form method="POST" >
-                            <div class="mb-3">
-                                <label for="UrunAd" class="form-label">Ürünün Adı</label>
-                                <input type="text" class="form-control" name="UrunAd" id="UrunAd" value="<?php echo $selectedUrun["urun_adi"] ?>">
-                            </div>
-                            <div class="mb-3">
-                                <label for="Marka" class="form-label">Marka</label>
-                                <input type="text" class="form-control" name="Marka" id="Marka" value="<?php echo $selectedUrun["marka"] ?>">
-                            </div>
-                            <div class="mb-3">
-                                <label for="Fiyat" class="form-label">Fiyat</label>
-                                <input type="text" class="form-control" name="Fiyat" id="Fiyat" value="<?php echo $selectedUrun["fiyat"] ?>">
-                            </div>
-                            <div class="mb-3">
-                                <label for="Acıklama" class="form-label">Açıklama</label>
-                                <input type="text" class="form-control" name="Acıklama" id="Acıklama" value="<?php echo $selectedUrun["aciklama"] ?>">
-                            </div>
-                            <div class="mb-3">
-                                <label for="Resim" class="form-label">Resim</label>
-                                <input type="text" class="form-control" name="Resim" id="Resim" value="<?php echo $selectedUrun["Resim"] ?>">
-                            </div>
-                            <a href="products.php"><input type="submit" value="Değiştir" class="btn btn-primary "></a>
-                        </form>
-                    </div>
+<header>
+    <h1>otuz9optik Yönetim Paneli</h1>
+</header>
+<div class="container my-3">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <form method="POST" >
+                        <div class="mb-3">
+                            <label for="UrunAd" class="form-label">Ürünün Adı</label>
+                            <input type="text" class="form-control" name="UrunAd" id="UrunAd" value="<?php echo $selectedUrun["urun_adi"] ?>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Marka" class="form-label">Marka</label>
+                            <input type="text" class="form-control" name="Marka" id="Marka" value="<?php echo $selectedUrun["marka"] ?>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Fiyat" class="form-label">Fiyat</label>
+                            <input type="text" class="form-control" name="Fiyat" id="Fiyat" value="<?php echo $selectedUrun["fiyat"] ?>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Acıklama" class="form-label">Açıklama</label>
+                            <input type="text" class="form-control" name="Acıklama" id="Acıklama" value="<?php echo $selectedUrun["aciklama"] ?>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Resim" class="form-label">Resim</label>
+                            <input type="text" class="form-control" name="Resim" id="Resim" value="<?php echo $selectedUrun["resim"] ?>">
+                        </div>
+                        <a href="products.php"><input type="submit" value="Değiştir" class="btn btn-primary "></a>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </body>
 
 </html>

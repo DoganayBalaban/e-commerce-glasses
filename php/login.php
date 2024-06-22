@@ -21,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             session_start();
             $_SESSION['ad'] = $user['kullanici_adi'];
             $_SESSION['user_id'] = $user['kullanici_id'];
+            $_SESSION['email'] = $user['eposta'];
             header("Location: ../index.php");
             exit(); // İşlemi sonlandır
         } else {

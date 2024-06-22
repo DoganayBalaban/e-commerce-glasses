@@ -90,7 +90,7 @@ include "../php/login.php"
           <a href="#" target="_blank">Şifreni mi unuttun?</a>
         </p>
         <p style="text-align: left">
-          <a href="Kayıtol.php" target="">Bir hesabın yok mu? Hesap oluştur</a>
+          <a href="Kayit-ol.php" target="">Bir hesabın yok mu? Hesap oluştur</a>
         </p>
         <p style="text-align: left">
           <a href="../index.php">Hesap Açmadan Devam Et.</a>

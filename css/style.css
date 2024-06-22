@@ -289,6 +289,7 @@ body {
   flex-direction: column;
   align-items: start;
   gap: 20px;
+
 }
 
 .contact-left-title h2 {
@@ -437,6 +438,7 @@ ul {
 /* About us */
 .about {
   display: flex;
+
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -455,6 +457,7 @@ ul {
 }
 .about-content {
   flex: 1;
+
 }
 .about-content h2 {
   font-size: 23px;
@@ -462,7 +465,7 @@ ul {
   color: #333;
 }
 .about-content p {
-  font-size: 18px;
+  font-size: 10px;
   line-height: 1.5;
   color: #666;
 }

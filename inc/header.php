@@ -30,7 +30,7 @@
             if (!isset($_SESSION["ad"])) {
                 ?>
                 <ul>
-                    <li><a href="pages/Girisyap.php"><i class="fa-regular fa-user"></i></a></li>
+                    <li><a href=pages/Girisyap.php><i class="fa-regular fa-user"></i></a></li>
                     <li><a class="search-bar" href="pages/Products.php"><i class="fa-solid fa-magnifying-glass"></i></a></li>
                     <li><a href="pages/Sepet.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
@@ -40,7 +40,8 @@
                 <ul>
                     <li><a href="#"><i class="fa-regular fa-user"></i></a>
                     <ul>
-                        <a href="pages/favoriler.php"><li>Favoriler</li></a>
+                        <a href=pages/favoriler.php><li>Favoriler</li></a>
+                        <a href=pages/siparisler.php><li>Siparişler</li></a>
                         <a href="php/Cikisyap.php"><li>Çıkış Yap</li></a>
                     </ul>
                     </li>

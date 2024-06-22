@@ -93,7 +93,6 @@
             <li><a href="dashboard.php">Ana Sayfa</a></li>
             <li><a href="products.php">Ürünler</a></li>
             <li><a href="orders.php">Siparişler</a></li>
-            <li><a href="customers.php">Müşteriler</a></li>
             <!-- Diğer bağlantılar -->
         </ul>
     </nav>

@@ -99,7 +99,7 @@ include "../php/register.php"
 <div class="container">
     <h2>Hesap Oluştur</h2>
 
-    <form method="POST" action="Kayıtol.php">
+    <form method="POST" action="../php/register.php">
         <label for="username">Kullanıcı Adı:</label>
         <input type="text" id="username" name="username"/>
 

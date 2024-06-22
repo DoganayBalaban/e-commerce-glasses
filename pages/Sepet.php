@@ -163,7 +163,9 @@ $result = mysqli_query($conn, $sql);
         ?>
         <p class="total">Toplam ₺<?php echo $total['toplam_fiyat']; ?></p>
         <p>Kargo, vergi ve kupon kodları sonraki aşamada hesaplanacaktır.</p>
-        <button class="checkout">Satın Al</button>
+        <form method="post" action="../php/satin-al.php">
+            <button class="checkout" name="order">Satın Al</button>
+        </form>
         <form method="POST" action="../php/sepeti_bosalt.php" style="margin-top: 10px;">
           <button type="submit" class="btn btn-danger">Sepeti Boşalt</button>
         </form>

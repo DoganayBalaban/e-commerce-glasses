@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                     while ($row = mysqli_fetch_assoc($result)) { ?>
                         <div class="card">
                             <div class="discount-img">%30 İNDİRİM</div>
-                            <img src="<?php echo '../'.$row["resim"]; ?>" alt=""/>
+                            <img src="<?php echo '../images/'.$row['marka'].'/'.$row["resim"]; ?>" alt=""/>
                             <div class="card-content">
                                 <h2><?php echo $row["aciklama"]; ?></h2>
                                 <p><?php echo $row["fiyat"]; ?> TL</p>
@@ -88,9 +88,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                 while ($row = mysqli_fetch_assoc($cikti)) { ?>
                     <div class="card">
                         <div class="discount-img">%30 İNDİRİM</div>
-                        <img src="<?php echo '../'.$row["resim"]; ?>" alt=""/>
+                        <img src="<?php echo '../images/'.$row['marka'].'/'.$row["resim"]; ?>" alt=""/>
                         <div class="card-content">
                             <h2><?php echo $row["aciklama"]; ?></h2>
+                            <strong><?php echo $row["marka"]; ?></strong>
                             <p><?php echo $row["fiyat"]; ?> TL</p>
                             <div class="satın-al">
                                 <a href="<?php echo 'Singleproduct.php?urun_id=' . $row["urun_id"]; ?>">
