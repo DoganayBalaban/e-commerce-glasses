@@ -90,10 +90,6 @@ Veritabanı şu tabloları içerir:
 - `cart`: Sepet
 - `favorites`: favoriler
 
-## Geliştirici Bilgileri
 
-- **İsim:** [Doğanay Balaban]
-- **E-posta:** [dbalaban1907@gmail.com]
-- **GitHub:** [github.com/DoganayBalaban]
 
 
